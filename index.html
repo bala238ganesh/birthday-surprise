@@ -1,0 +1,144 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#ff4d6d">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- FLOATING HEARTS -->
+
+    <div class="hearts"></div>
+
+
+    <!-- LOADING SCREEN -->
+
+    <section id="loadingPage" class="container active">
+
+        <div class="card">
+
+            <h1 id="loadingText">Decrypting memories...</h1>
+
+            <p>Please wait ❤️</p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- LOGIN PAGE -->
+
+    <section id="loginPage" class="container hidden">
+
+        <div class="card">
+
+            <h1>🎁 A Small Surprise For You</h1>
+
+            <p>Enter your birthday (DDMM)</p>
+
+          <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                autocomplete="off"
+                value=""
+            />
+
+            <button onclick="checkPassword()">
+                Unlock ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- WISH PAGE -->
+
+    <section id="wishPage" class="container hidden">
+
+        <div class="card">
+
+            <h1>Happy Birthday ❤️</h1>
+
+            <p class="message" id="typedMessage"></p>
+
+            <button onclick="openMemories()">
+                Go To Memories ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MEMORY PAGE -->
+
+    <section id="memoryPage" class="container hidden">
+
+        <audio id="birthdaySong" loop>
+
+            <source src="song.mp3" type="audio/mp3" />
+
+        </audio>
+
+
+        <div class="slideshow-container">
+
+          <img class="slide active-slide" src="photos/1.jpeg" />
+            <img class="slide" src="photos/2.jpeg" />
+            <img class="slide" src="photos/3.jpeg" />
+            <img class="slide" src="photos/4.jpeg" />
+            <img class="slide" src="photos/5.jpeg" />
+            <img class="slide" src="photos/6.jpeg" />
+            <img class="slide" src="photos/7.jpeg" />
+            <img class="slide" src="photos/8.jpeg" />
+            <img class="slide" src="photos/9.jpeg" />
+            <img class="slide" src="photos/10.jpeg" />
+            <img class="slide" src="photos/11.jpeg" />
+            <img class="slide" src="photos/12.jpeg" />
+            <img class="slide" src="photos/13.jpeg" />
+            <img class="slide" src="photos/14.jpeg" />
+            <img class="slide" src="photos/15.jpeg" />
+            <img class="slide" src="photos/16.jpeg" />
+            <img class="slide" src="photos/17.jpeg" />
+            <img class="slide" src="photos/18.jpeg" />
+            <img class="slide" src="photos/19.jpeg" />
+            <img class="slide" src="photos/20.jpeg" />
+            <img class="slide" src="photos/21.jpeg" />
+            <img class="slide" src="photos/22.jpeg" />
+            <img class="slide" src="photos/23.jpeg" />
+        </div>
+
+        <!-- <div class="final-text">
+
+            Always be happy ❤️
+            <br><br>
+
+            Always with me,
+            I am always there for you,
+            my dear Panda 🐼
+
+        </div> -->
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* BODY */
+
+body {
+    background: #000;
+    min-height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.active {
+    display: flex;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* CARD */
+
+.card {
+
+    width: 100%;
+    max-width: 380px;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+
+.card h1 {
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+
+.card p {
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+.message {
+
+    font-size: 16px;
+
+    white-space: pre-line;
+}
+
+
+/* INPUT */
+
+input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    margin-top: 15px;
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    outline: none;
+}
+
+
+/* BUTTON */
+
+button {
+
+    background: #ff4d6d;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 24px;
+
+    border-radius: 14px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+
+    transform: scale(1.05);
+}
+
+
+/* SLIDESHOW */
+
+.slideshow-container {
+
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: black;
+}
+
+
+/* IMAGE */
+
+.slide {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    opacity: 0;
+
+    transition: opacity 1.5s ease-in-out;
+
+    background: black;
+}
+
+
+/* ACTIVE IMAGE */
+
+.active-slide {
+
+    opacity: 1;
+}
+
+
+/* FINAL TEXT */
+
+.final-text {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    text-align: center;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    line-height: 1.6;
+
+    text-shadow: 0 0 12px rgba(0,0,0,0.9);
+
+    z-index: 10;
+}
+
+
+/* FLOATING HEARTS */
+
+.hearts::before,
+.hearts::after {
+
+    content: '❤️ ❤️ ❤️ ❤️ ❤️';
+
+    position: absolute;
+
+    width: 100%;
+
+    animation: float 10s linear infinite;
+
+    opacity: 0.25;
+
+    font-size: 24px;
+
+    z-index: 1;
+}
+
+
+.hearts::after {
+
+    top: 50%;
+
+    animation-delay: 5s;
+}
+
+
+/* LOADING ANIMATION */
+
+#loadingText {
+
+    animation: pulse 1s infinite;
+}
+
+
+@keyframes pulse {
+
+    0% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+
+/* HEART FLOAT */
+
+@keyframes float {
+
+    from {
+        transform: translateY(100vh);
+    }
+
+    to {
+        transform: translateY(-100vh);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .card {
+
+        max-width: 95%;
+    }
+
+    .card h1 {
+
+        font-size: 24px;
+    }
+
+    .message {
+
+        font-size: 15px;
+    }
+
+    .final-text {
+
+        font-size: 18px;
+
+        bottom: 30px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .slide {
+
+        max-width: 95vw;
+        max-height: 85vh;
+    }
+}
